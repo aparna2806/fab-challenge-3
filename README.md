@@ -15,9 +15,9 @@
 Santi created a [miro board](https://miro.com/app/board/uXjVO4T-S2o=/?share_link_id=336206314852) with venn diagrams, where we wrote down our personal areas of interest and also see the intersections happening within the members of the group.
 
  ## References
- (images/idea.png)
- (images/reference.png)
- 
+  ![](images/idea.png)
+  ![](images/reference.png)
+
  ## Concept Development
  - It was super interesting to see how our interests were overlapping and completing each other. Very early on we realised, all of us collectively wanted to take an unconventional approach for the challenge - *provotyping*.
  ![Screenshot of work space on miro](Images/miro.jpg)
