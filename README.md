@@ -103,7 +103,7 @@ Santi created a [miro board](https://miro.com/app/board/uXjVO4T-S2o=/?share_link
 11. Serial begin, serial available, serial read and serial write were for the communication between p5 and arduino.
 
 12. Meanwhile Nikita worked on creating a 3d environment for the people walking with different inflation sizes which we 3d scanned.
-![](images/010.png)
+![](images/009.png)
 
  ## In Action
 
