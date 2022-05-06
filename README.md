@@ -107,6 +107,10 @@ Santi created a [miro board](https://miro.com/app/board/uXjVO4T-S2o=/?share_link
 ![](images/009.jpeg)
 
  ## In Action
+ another prototype:
+ ![](images/12.jpeg)
+ for the box:
+ ![](images/13.jpeg)
  ![](images/10.jpg)
 
  ## Links to files
