@@ -84,14 +84,14 @@ Santi created a [miro board](https://miro.com/app/board/uXjVO4T-S2o=/?share_link
 ![](images/05.jpg)
 
 5. Trying out inflations by blowing in air through a straw
-![](images/06.gif)
+![](images/6.gif)
 
 6. Various prototypes we tried
 ![](images/09.jpg)
 
 7. The next step was to connect the connections and write the code for arduino to pump air into the air pump. Below is the code written:-
 ![](images/07.jpeg)
-![] (images/08.jpg)
+![](images/08.jpeg)
 
 8. Making the p5js and arduino communicate was more challenging then we expected it to be. We foolowed this guide which came in very handy to understand the concept but also to debug. [itp serial control communication]https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-serial-input-to-the-p5-js-ide/
 
@@ -106,6 +106,7 @@ Santi created a [miro board](https://miro.com/app/board/uXjVO4T-S2o=/?share_link
 ![](images/009.jpeg)
 
  ## In Action
+ ![](images/10.jpg)
 
  ## Links to files
  - [1](laser cut files/01.3dm)
