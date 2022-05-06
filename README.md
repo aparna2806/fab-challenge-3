@@ -1,4 +1,4 @@
- # Fab Lab Challenge 3
+ # Fab Lab Challenge 3 : (OVER)LOAD
  *(2/05 - 6/05)*
 
  #### markdown syntax guide https://www.markdownguide.org/basic-syntax/#images-1
@@ -8,116 +8,107 @@
  2. Brainstorming and making process
  3. Laser cut files
 
- ## Project description
+ ## Project description -
+ ![](images/overload.png)
  To create an artefact that visualises consumption of information that happens through screens. We wanted to know what happens when wearables project information outwards instead of just performing the function of data logging which is more inward and personal activity. Also we were interested in exploring What does it mean to "feel" the over load of digital information?
 
  ## Brainstorming
 Santi created a [miro board](https://miro.com/app/board/uXjVO4T-S2o=/?share_link_id=336206314852) with venn diagrams, where we wrote down our personal areas of interest and also see the intersections happening within the members of the group.
 
+![](images/idea.png)
+ Didac drew a basic sketch of how we wanted the communication to happen from our phones (input) to the wearable which blows up like inflatables depending on the screen usage. We wanted the wearable to be happen live (like annotate values for each 5 minutes usage with air pump into the inflatable).
+
+ Nikita visualised a quick version of the possible wearable. We were thinking different parts of the body which could inflate but we went with neck for further explorations as we thought it would be visually interesting and representative of the screen usage consequences. Like physiclaly restricting your body movements and also the design when inflated would prevent to see the 'real' version of you.
+
  ## References
-  ![](images/idea.png)
   ![](images/reference.png)
+  We choose the inflatables inspiration from MIT. It was pretty cool how they explored with different techniques 3 axis cnc mill for heat transfer with different materials (silicone, fabric). They also explored auto inflatables using carbon.
+
+  But for us to quickly prototype with immediate things around us, Dafne showed us two previous projects which were done by fab lab and fabricademy alumni respectively.
+  [first project](https://class.textile-academy.org/2022/saskia-helinska/finalproject.html)
+  [second project](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/week16.html)
 
  ## Concept Development
- - It was super interesting to see how our interests were overlapping and completing each other. Very early on we realised, all of us collectively wanted to take an unconventional approach for the challenge - *provotyping*.
- ![Screenshot of work space on miro](Images/miro.jpg)
-
- - We were fascinated by different ways we could "track" data with the changes in our surrounding- as a droplet, as change in ambient light.
-
- - When thinking of ways to make a material "alive", we thought of simple to complex ways of making it. From- using biomaterial and the changes in the material in itself to show passage of time, the ripples created on water surfaces, using chromatic paint to make it "responsive", generative patterns, adding elements day by day to make the piece dynamic/evolving, the patterns created by water based on height and quantity.
-
- - After collectively deciding on what kind of approach we want to take, we were thinking of various data information we were interested in gathering.
-
- - While discussing ideas, we also kept in mind if we are able integrate our previous weekly challenges learning into practice. (parametric modelling, laser cut, vinyl cutting)
-
- - The kind of data we can gather with What Pulse about our keyboard. We played with the idea of "how much did I rethink in the digital world?" and tied it up with the number of times the delete button was pressed
- ![Keyboard tracking](Images/img02.png)
- ## Sketches
- ![](Images/img03.png)
- ![](Images/conceptsketch.jpg)
+ - It was super interesting to see how our interests were overlapping and feeding into each others. Very early on we realised, all of us collectively wanted to explore inflatables and try 3d scanning post the process.
+ - Our first step was to figure out how would we want to gather data from phone about the usage. Miguel shared a different way to gather data through any social media using [ifttt] (https://ifttt.com/). Jeremy told us we could also look into [tasker] (https://www.arduino.cc/reference/en/libraries/tasker/).
+ - But for now we went with using p5.js interface and by simply tapping the interface we wanted to generate time data and carry forward that final data output as input for arduino.
+ - We wanted to try using the serial control software which we had a presentation about last week and see if we could actually do it in this project.
+ - We divided tasks for the next two days ( Didac worked on the prototypes and electronics, Aparna worked on the prototypes, Nikita worked on the p5js part and integration with arduino).
 
  ## Materials needed
- - Cardboard (4.0 mm) 1000x60cm
- - Acrylic Sheet (3.0 mm) 60x30cm
- - Canvas fabric (0.5 mm)100x60cm
- - Pigments natural dyes
- - Dropper bottle
- - Water
- - Screws to fix
+ - Polythene bags (only thing to consider it should be thick enough to to hold the air pump force)
+ - Valve if needed to hold the air inside the inflatable
+ - Air Pump
+ - Relay
+ - Bread Board and Jumper Wires
+ - Voltage Converter (220v to 12v)
+ - ESP32
+ - Plastic tube to connect inflatable with pump
+ - 3D scanner
+
+ ## Tools used
+ - Arduino
+ - p5.js
+ - Serial Control
+ - Blender
+ - Rhino
 
  ## Prototyping
- - While discussing the idea, we were not sure if the tension between the cylinders would be sufficient enough to move but also keep the canvas in hold. To get an understanding of the mechanism, we slit the cardboard into 4 pieces (front, back, side A, side B) with holes on the side to insert the cylinders.
- 1. For prototyping the outer box with cardboard :
- - Power: 40
+ 1. For prototyping the inflatables we went with the documentation values. The worked perfectly fine to cut, but the seal was not strong enough it left out some holes:
+
+ Sealing Previous values-
+ - Power: 2.7
  - Speed: 1
  - Frequency: 1000 hz
- ![Cardboard prototype of the analog data plotter](Images/prototyping_4.jpg)
+ - z offset: 16
 
- - After loading the canvas on the wooden cylinders, we wanted to see how the natural dye (turmeric+water) would emerge and leave residues on the canvas.
- ![Data logging with natural dye](Images/prototyping_5.jpg)
- ![](Images/prototype_07.jpg)
+ Sealing Tweaked values:
+ - Power: 3
+ - Speed: 1
+ - Frequency: 1000 hz
+ - z offset: 16
 
- **Results:**
- - The pulling mechanism worked fine.
- - The teeth on the outside of the box did a good job to hold the fabric in place.
- - The fabric did not soak much of the dye; maybe because the canvas was coated with a wax kind of layer.
- - The main challenge and failures we had was while testing the mechanism to lock the Side A and Side B into the acrylic base sheet. As the material is brittle, we had to laser cut different dimensions of height and width to get the flexibility but not break apart.
+ Cutting Values (they stayed the same ;) ):
+ - Power: 5
+ - Speed: 1
+ - Frequency: 1000 hz
+ - z offset: 10
+2. We gave an offset of 0.5m between each seal layer in the rhino laser cut file (blue) and then 0.8m for the the cut layer (red). The order was first we let the seal layer and then the cut layer run.
+ ![](images/01.jpg)
 
- **Results**
- ![The holding joint](Images/fabrication_01.jpg)
- - Initially joints were too thin (measurements:)
- - Or joints were too short
- - Then joints were okay but not fully sure secure to trust
- - Afterwards, we reduced the width of the centre part of the joint which gave it more security.
+3. After preparing the files, we had to make sure to tape in the plastic bags properly without any wrinkles as it would lead to miscalculations during the sealing part.
+![](images/03.jpg)
 
- ## Fabrication process
- We used laser cutter and cross cut wood cutting machine for the fabrication process.
- 1. The Trotec Speedy for cutting the **3.0 mm acrylic**. With the parameters:
- - Power : 60
- - Speed : 0.5
- - Hz : 20000
+4. We tried playing with different sizes and inside sealing to see which which inflate better and also see it would change the form of the inflatable (like fold in any particular direction)
+![](images/04.jpg)
+![](images/05.jpg)
 
- 2. The Trotec Speedy for engraving the **3.0 mm acrylic**. With the parameters:
- - Power : 70
- - Speed : 100
- - Hz : 20000
+5. Trying out inflations by blowing in air through a straw
+![](images/06.gif)
 
- 3. The Trotec Speedy for cutting the **0.5 mm canvas cloth**. With the parameters:
- - Power : 20
- - Speed : 1.00
- - Hz : 1000 hz
+6. Various prototypes we tried
+![](images/09.jpg)
 
- 4. The Trotec Speedy for engraving on the **0.5 mm canvas cloth**. With the parameters:
- - Power : 70
- - Speed : 80
- - Hz : 1000 ppi
+7. The next step was to connect the connections and write the code for arduino to pump air into the air pump. Below is the code written:-
+![](images/07.jpeg)
+![] (images/08.jpg)
 
- 5. Cross cut wood cutting machine for cutting the **wooden cylinders**. With the parameters:
- - 1st cylinder - diameter: 25 mm, length: 180 mm
- - 2nd cylinder - diameter: 15 mm, length: 180 mm
- - 3rd cylinder - diameter: 15 mm, length: 180 mm
+8. Making the p5js and arduino communicate was more challenging then we expected it to be. We foolowed this guide which came in very handy to understand the concept but also to debug. [itp serial control communication]https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-serial-input-to-the-p5-js-ide/
 
- ## Setting Up
- ![Fixing the base and the data plotter](Images/fabrication_02.jpg)
- ![Working with the mechanism](Images/fabrication_06.jpg)
- ![Etching and cutting the fabric](Images/fabrication_04.jpg)
- ![Working with the mechanism](Images/fabrication_05.jpg)
+9. We connected the arduino tools and serial control to the same usbserial port. But we learnt that it  detects only one port at one time. So every time we changed our code in arduino and wanted to upload we had to close serial control otherwise there would be a error message.
+
+10. The p5js interaction starts with clicking on the screen and when you leave it, the followng gets recorded as final data after you press the button that's below on the left side. The code we wrote:
+![](images/010.png)
+
+11. Serial begin, serial available, serial read and serial write were for the communication between p5 and arduino.
+
+12. Meanwhile Nikita worked on creating a 3d environment for the people walking with different inflation sizes which we 3d scanned.
+![](images/010.png)
 
  ## In Action
- ![Mechanism sketch](Images/tensiondiagram.png)
- ![The parameters for plotting](Images/fabrication_07.jpg)
- ![](Images/fabrication_08.jpg)
- ![](Images/fabrication_09.jpg)
- ![](Images/fabrication_10.jpg)
- ![](Images/fabrication_11.jpg)
-
- ## Further Ideas
- - Next, we want to measure other parameters like at what time I took my contraceptive pill, how many times did I consume coffee, how much/less homesick did I feel. More intimate habits.
- - As we were running out of time, we didn't have time to wash the fabric and engrave on it. As we speculate the dyes would be more absorbed into the fabric.
- - We are interested in the new rituals of everyday life that would emerge.
- - We are curious to what limits can we measure on the slots and try different parameters.
- - Try out different materials for the rolling.
 
  ## Links to files
- - [Laser cut acryclic](Files/data0.1.dxf)
- - [Laser cut Fabric](Files/Fabric_calendar.dxf)
+ - [1](laser cut files/01.3dm)
+ - [2](laser cut files/02.3dm)
+ - [3](laser cut files/03.3dm)
+ - [4](laser cut files/04.3dm)
