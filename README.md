@@ -9,7 +9,7 @@
  3. Laser cut files
 
  ## Project description -
- ![](images/overload.png)
+ ![](images/overload.jpg)
  To create an artefact that visualises consumption of information that happens through screens. We wanted to know what happens when wearables project information outwards instead of just performing the function of data logging which is more inward and personal activity. Also we were interested in exploring What does it mean to "feel" the over load of digital information?
 
  ## Brainstorming
@@ -103,7 +103,7 @@ Santi created a [miro board](https://miro.com/app/board/uXjVO4T-S2o=/?share_link
 11. Serial begin, serial available, serial read and serial write were for the communication between p5 and arduino.
 
 12. Meanwhile Nikita worked on creating a 3d environment for the people walking with different inflation sizes which we 3d scanned.
-![](images/009.png)
+![](images/009.jpeg)
 
  ## In Action
 
